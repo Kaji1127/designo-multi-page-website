@@ -25,10 +25,12 @@ const Service = ({ products }) => {
 			'We deliver eye-catching branding materials that are tailored to meet your business objectives.';
 	}
 
+	const query = router.query.service.replace('-', ' ');
+
 	return (
 		<>
 			<Head>
-				<title>{`Designo Multi Page Website | ${products.category}`}</title>
+				<title>{`Designo Multi Page Website | ${query}`}</title>
 			</Head>
 			<ProductCategory description={featureDesc} />
 			<ProductList products={products} />
