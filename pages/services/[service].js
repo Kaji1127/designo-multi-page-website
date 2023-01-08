@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
+
 import ServicesItems from '../../components/home/services/services';
 import ProductCategory from '../../components/products/product-category/product-category';
 import ProductList from '../../components/products/product-list/product-list';
@@ -25,6 +27,9 @@ const Service = ({ products }) => {
 
 	return (
 		<>
+			<Head>
+				<title>{`Designo Multi Page Website | ${products.category}`}</title>
+			</Head>
 			<ProductCategory description={featureDesc} />
 			<ProductList products={products} />
 			<ServicesItems service={router.query.service} />
