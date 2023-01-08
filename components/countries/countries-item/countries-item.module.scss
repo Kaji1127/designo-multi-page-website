@@ -1,0 +1,129 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.country {
+	display: grid;
+
+	@include mq(md) {
+		border-radius: 1.5rem;
+		overflow: hidden;
+		gap: 2.4rem;
+	}
+
+	@include mq(lg) {
+		grid-template-columns: 1fr 30rem;
+		gap: 3rem;
+	}
+
+	@include mq(xl) {
+		grid-template-columns: 1fr 35rem;
+	}
+
+	&:nth-child(2n) {
+		@include mq(lg) {
+			grid-template-columns: 30rem 1fr;
+		}
+
+		@include mq(xl) {
+			grid-template-columns: 35rem 1fr;
+		}
+	}
+
+	&:nth-child(2n-1) {
+		& .image {
+			@include mq(lg) {
+				grid-column: 2 / 3;
+			}
+		}
+		& .text {
+			@include mq(lg) {
+				grid-column: 1 / 2;
+				grid-row: 1;
+			}
+		}
+	}
+
+	& .image {
+		& picture {
+			height: 100%;
+		}
+		@include mq(md) {
+			border-radius: 1.5rem;
+			overflow: hidden;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	& .text {
+		background-color: var(--pale-peach);
+		text-align: center;
+		padding: 8rem 0;
+		position: relative;
+		overflow: hidden;
+
+		@include mq(md) {
+			border-radius: 1.5rem;
+			overflow: hidden;
+			padding: 8.8rem 7.5rem;
+			text-align: left;
+		}
+
+		@include mq(xl) {
+			padding: 8.8rem 9.5rem;
+		}
+
+		& .circle {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 58.4rem;
+
+			@include mq(md) {
+				top: -27.4rem;
+			}
+		}
+
+		& h3 {
+			font-size: 3.2rem;
+			color: var(--peach);
+			text-transform: capitalize;
+			line-height: 1.125;
+			margin-bottom: 2.4rem;
+		}
+	}
+
+	& .info {
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+
+		@include mq(md) {
+			flex-direction: row;
+			gap: 11rem;
+		}
+
+		& .desc {
+			& h4 {
+				font-size: 1.5rem;
+				line-height: 1.67;
+				text-transform: capitalize;
+
+				@include mq(md) {
+					font-size: 1.6rem;
+				}
+			}
+
+			& p {
+				font-size: 1.5rem;
+
+				@include mq(md) {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+}

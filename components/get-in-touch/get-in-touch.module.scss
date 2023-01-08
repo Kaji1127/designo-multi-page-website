@@ -1,0 +1,118 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/mixin.scss';
+
+.contact {
+	background-color: var(--peach);
+	border-radius: 1.5rem;
+	overflow: hidden;
+	position: absolute;
+	top: -18.9rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	@include mq(md) {
+		top: -26.4rem;
+	}
+
+	@include mq(lg) {
+		top: -22rem;
+	}
+
+	& .container {
+		position: relative;
+		z-index: 3;
+		padding: 6.4rem 0;
+
+		@include mq(md) {
+			padding: 5.7rem 0;
+		}
+
+		@include mq(lg) {
+			padding: 7.2rem 9.5rem;
+		}
+	}
+
+	& .image {
+		max-width: 87.6rem;
+		height: 58.4rem;
+		position: absolute;
+		top: -15%;
+		left: -140%;
+		z-index: -1;
+		transform: scaleY(-1);
+
+		@include mq(sm) {
+			left: -60%;
+		}
+
+		@include mq(md) {
+			left: 0%;
+		}
+
+		@include mq(lg) {
+			top: -47%;
+			left: 9%;
+			transform: scaleY(1);
+		}
+
+		@include mq(xl) {
+			left: 21%;
+		}
+	}
+
+	& .content {
+		display: flex;
+		flex-direction: column;
+		gap: 3.2rem;
+
+		@include mq(lg) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	& .text {
+		text-align: center;
+
+		@include mq(lg) {
+			text-align: left;
+		}
+
+		h3 {
+			font-size: 3.2rem;
+			color: var(--white);
+			line-height: 1.125;
+			margin-bottom: 1.2rem;
+
+			@include mq(md) {
+				font-size: 4rem;
+				line-height: 1;
+			}
+
+			span {
+				display: block;
+			}
+		}
+
+		p {
+			font-size: 1.5rem;
+			color: var(--white);
+			line-height: 1.67;
+			width: 27.9rem;
+			margin: 0 auto;
+
+			@include mq(md) {
+				font-size: 1.6rem;
+				width: 45.4rem;
+			}
+
+			@include mq(lg) {
+				margin: 0;
+			}
+		}
+	}
+
+	& a {
+		align-self: center;
+	}
+}

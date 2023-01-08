@@ -1,0 +1,104 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.container {
+	@include mq(sm) {
+		border-radius: 1.5rem;
+		overflow: hidden;
+		margin-bottom: 12rem;
+	}
+
+	@include mq(xl) {
+		margin-bottom: 16rem;
+	}
+
+	& .content {
+		@include mq(lg) {
+			display: grid;
+			grid-template-columns: 1fr 38rem;
+		}
+
+		@include mq(xl) {
+			grid-template-columns: 1fr 47.6rem;
+			grid-template-rows: 48rem;
+		}
+	}
+
+	& .image {
+		img {
+			width: 100%;
+		}
+
+		@include mq(lg) {
+			grid-column: 2 / 3;
+			grid-row: 1;
+		}
+	}
+
+	& .text {
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		padding: 8rem 2.4rem;
+		background-color: var(--peach);
+		overflow: hidden;
+
+		@include mq(md) {
+			padding: 6.4rem 5.8rem;
+		}
+
+		@include mq(lg) {
+			grid-column: 1 / 2;
+			grid-row: 1;
+			text-align: left;
+			padding-left: 7.2rem;
+			padding-right: 4rem;
+		}
+
+		@include mq(xl) {
+			padding: 13.5rem 9.5rem;
+			padding-right: 5rem;
+		}
+
+		& .circle {
+			position: absolute;
+			top: -14.6rem;
+			left: 8.3rem;
+			z-index: -1;
+			transform: rotate(-90deg);
+
+			@include mq(md) {
+				top: -42.4rem;
+				left: -14rem;
+			}
+
+			@include mq(lg) {
+				top: -16rem;
+				left: -1.6rem;
+			}
+		}
+
+		& h2 {
+			font-size: 3.2rem;
+			line-height: 1.125;
+			color: var(--white);
+			margin-bottom: 2.4rem;
+			font-weight: 500;
+
+			@include mq(md) {
+				font-size: 4.8rem;
+				margin-bottom: 3.2rem;
+			}
+		}
+
+		& p {
+			font-size: 1.5rem;
+			line-height: 1.67;
+			color: var(--white);
+
+			@include mq(md) {
+				font-size: 1.6rem;
+			}
+		}
+	}
+}

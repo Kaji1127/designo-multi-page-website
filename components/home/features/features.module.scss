@@ -1,0 +1,29 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.features {
+	margin-bottom: 31rem;
+
+	@include mq(md) {
+		margin-bottom: 33.1rem;
+	}
+
+	@include mq(lg) {
+		margin-bottom: 38rem;
+	}
+
+	& .leaf {
+		position: absolute;
+		top: 46.5rem;
+		left: 0;
+		z-index: -1;
+	}
+
+	& .leaf-bottom {
+		position: absolute;
+		bottom: -14%;
+		right: 0;
+		z-index: -1;
+		transform: scaleY(-1) scaleX(-1);
+	}
+}

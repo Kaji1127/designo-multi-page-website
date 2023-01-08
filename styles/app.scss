@@ -1,0 +1,52 @@
+@import './breakpoints.scss';
+@import './mixin.scss';
+
+:root {
+	--peach: hsl(11, 73%, 66%);
+	--light-peach: hsl(11, 100%, 80%);
+	--pale-peach: hsl(14, 76%, 97%);
+	--black: hsl(270, 3%, 11%);
+	--dark-grey: hsl(264, 5%, 20%);
+	--grey: hsl(0, 0%, 56%);
+	--light-grey: hsl(210, 17%, 95%);
+	--white: hsl(0, 0%, 100%);
+
+	--overlay: hsla(0, 0%, 0%, 0.6);
+	--hover-overlay: hsla(11, 73%, 66%, 0.7);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px var(--peach) inset;
+	-webkit-text-fill-color: var(--white) !important;
+	border: none;
+}
+
+.container {
+	max-width: 32.7rem;
+	width: 100%;
+	margin: 0 auto;
+
+	@include mq(sm) {
+		max-width: 52rem;
+	}
+
+	@include mq(md) {
+		max-width: 68.9rem;
+	}
+
+	@include mq(lg) {
+		max-width: 96rem;
+	}
+
+	@include mq(xl) {
+		max-width: 110rem;
+	}
+}

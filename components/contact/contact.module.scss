@@ -1,0 +1,154 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/mixin.scss';
+
+.container {
+	background-color: var(--peach);
+	padding: 7.2rem 2.4rem;
+	position: relative;
+	margin-bottom: 12rem;
+	overflow: hidden;
+
+	@include mq(md) {
+		border-radius: 1.5rem;
+		padding: 7.2rem 5.8rem;
+	}
+
+	@include mq(lg) {
+		padding: 5.5rem 8rem;
+	}
+
+	& .circle {
+		position: absolute;
+		top: 0;
+		left: -9rem;
+		max-width: 87.6rem;
+		height: 99rem;
+
+		@include mq(md) {
+			max-width: 64rem;
+			height: 64rem;
+			top: -5.4rem;
+			left: -10rem;
+		}
+	}
+
+	& .content {
+		position: relative;
+		z-index: 2;
+
+		@include mq(lg) {
+			display: grid;
+			grid-template-columns: minmax(35rem, 44.5rem) minmax(26rem, 38rem);
+			gap: 6rem;
+		}
+
+		@include mq(xl) {
+			gap: 9.5rem;
+		}
+	}
+
+	& .text {
+		text-align: center;
+		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			text-align: left;
+			margin-bottom: 4rem;
+		}
+
+		@include mq(lg) {
+			align-self: center;
+		}
+
+		& h2 {
+			font-size: 3.2rem;
+			color: var(--white);
+			line-height: 1.125;
+			margin-bottom: 2.4rem;
+
+			@include mq(md) {
+				font-size: 4.8rem;
+				line-height: 1;
+				margin-bottom: 3.2rem;
+			}
+		}
+
+		& p {
+			font-size: 1.5rem;
+			line-height: 1.67;
+			color: var(--white);
+
+			@include mq(md) {
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	& .form {
+		text-align: center;
+		display: grid;
+		gap: 4rem;
+
+		@include mq(md) {
+			gap: 2.4rem;
+		}
+
+		&-inner {
+			position: relative;
+
+			& input,
+			textarea {
+				border: none;
+				border-bottom: 0.1rem solid var(--white);
+				background-color: transparent;
+				outline: none;
+				width: 100%;
+				font-size: 1.5rem;
+				padding-bottom: 1.1rem;
+				padding-left: 1.4rem;
+				caret-color: var(--white);
+				color: var(--white);
+				font-weight: 500;
+
+				@include mq(md) {
+					font-size: 1.6rem;
+					padding-left: 2.4rem;
+				}
+
+				&::placeholder {
+					color: hsla(0, 100%, 100%, 0.6);
+					font-weight: 500;
+				}
+
+				&:focus {
+					border-bottom: 0.3rem solid var(--white);
+				}
+			}
+			&:not(:first-child) {
+				padding-top: 2.5rem;
+			}
+		}
+
+		& button {
+			justify-self: center;
+
+			@include mq(md) {
+				justify-self: end;
+			}
+		}
+	}
+
+	& .error {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.2rem;
+		line-height: 2.17;
+		font-style: italic;
+		color: var(--white);
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+	}
+}

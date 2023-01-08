@@ -1,0 +1,22 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.services {
+	margin-bottom: 12rem;
+	display: grid;
+	gap: 2.4rem;
+
+	&.service {
+		margin-bottom: 28rem;
+
+		@include mq(md) {
+			margin-bottom: 37.4rem;
+		}
+	}
+
+	@include mq(lg) {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 2.4rem;
+		column-gap: 3rem;
+	}
+}

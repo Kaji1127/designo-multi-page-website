@@ -1,0 +1,118 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.service {
+	position: relative;
+	border-radius: 1.5rem;
+	overflow: hidden;
+
+	&:first-of-type {
+		@include mq(lg) {
+			grid-row: 1 / 3;
+		}
+
+		& .link {
+			@include mq(lg) {
+				height: 64rem;
+			}
+		}
+	}
+
+	&.column {
+		&:first-of-type {
+			@include mq(lg) {
+				grid-row: 1 / 2;
+			}
+		}
+
+		& .link {
+			@include mq(lg) {
+				height: 30.8rem;
+			}
+		}
+	}
+
+	& .link {
+		height: 25rem;
+		display: block;
+
+		@include mq(sm) {
+			height: 20rem;
+		}
+
+		@include mq(lg) {
+			height: 30.8rem;
+		}
+	}
+
+	& .image {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	& .text {
+		position: absolute;
+		z-index: 3;
+		width: 25.5rem;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 1.2rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: background-color 0.4s;
+
+		&:hover + .bg-dark {
+			background-color: var(--hover-overlay);
+		}
+
+		@include mq(md) {
+			width: 36.4rem;
+			gap: 2.4rem;
+		}
+
+		h3 {
+			font-size: 2.8rem;
+			font-weight: 500;
+			color: var(--white);
+			text-transform: uppercase;
+			letter-spacing: 0.14rem;
+			line-height: 1.285;
+			white-space: nowrap;
+
+			@include mq(md) {
+				font-size: 4rem;
+				line-height: 1.2;
+				letter-spacing: 0.2rem;
+			}
+		}
+	}
+
+	& .view {
+		display: flex;
+		font-size: 1.5rem;
+		font-weight: 500;
+		letter-spacing: 0.5rem;
+		color: var(--white);
+		text-transform: uppercase;
+		align-items: center;
+		justify-content: center;
+		gap: 1.6rem;
+	}
+
+	& .bg-dark {
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		background-color: var(--overlay);
+		transition: background-color 0.4s;
+		&:hover {
+			background-color: var(--hover-overlay);
+		}
+	}
+}

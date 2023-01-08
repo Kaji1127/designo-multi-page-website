@@ -1,0 +1,15 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.countries {
+	display: grid;
+	gap: 4rem;
+
+	@include mq(md) {
+		gap: 12rem;
+	}
+
+	@include mq(lg) {
+		gap: 3.2rem;
+	}
+}

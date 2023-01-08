@@ -1,0 +1,14 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/mixin.scss';
+
+.container {
+	margin-bottom: 31rem;
+
+	@include mq(md) {
+		margin-bottom: 38.4rem;
+	}
+
+	@include mq(lg) {
+		margin-bottom: 38rem;
+	}
+}

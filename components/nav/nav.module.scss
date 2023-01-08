@@ -1,0 +1,56 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/mixin.scss';
+
+.nav,
+.footer-nav {
+	ul {
+		display: flex;
+	}
+
+	li {
+		list-style: none;
+		font-size: 1.4rem;
+		line-height: 1;
+		letter-spacing: 0.2rem;
+
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+	}
+}
+
+.nav {
+	ul {
+		gap: 4.2rem;
+	}
+
+	a {
+		color: var(--dark-grey);
+		&:hover {
+			border-bottom: 0.1rem solid var(--dark-grey);
+		}
+	}
+}
+
+.footer-nav {
+	@include mq(md) {
+		align-self: end;
+	}
+	ul {
+		flex-direction: column;
+		gap: 3.2rem;
+
+		@include mq(md) {
+			flex-direction: row;
+		}
+	}
+
+	a {
+		color: var(--white);
+
+		&:hover {
+			border-bottom: 0.1rem solid var(--white);
+		}
+	}
+}

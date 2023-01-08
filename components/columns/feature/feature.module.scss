@@ -1,0 +1,97 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/mixin.scss';
+
+.container {
+	display: grid;
+	gap: 8rem;
+
+	@include mq(md) {
+		gap: 3.2rem;
+	}
+
+	@include mq(lg) {
+		gap: 3rem;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.content {
+	@include mq(md) {
+		display: grid;
+		grid-template-columns: 20.2rem 1fr;
+		gap: 4.8rem;
+		align-items: center;
+	}
+
+	@include mq(lg) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 20.2rem 1fr;
+	}
+}
+
+.image {
+	position: relative;
+	margin-bottom: 4.8rem;
+
+	@include mq(md) {
+		margin-bottom: 0;
+	}
+
+	img {
+		margin: 0 auto;
+	}
+
+	svg {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+}
+
+.resourceful {
+	svg {
+		transform: translateX(-50%) rotate(270deg);
+	}
+}
+
+.friendly {
+	svg {
+		transform: translateX(-50%) rotate(90deg);
+	}
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	gap: 3.2rem;
+	text-align: center;
+	color: var(--dark-gray);
+
+	@include mq(md) {
+		text-align: left;
+		gap: 1.6rem;
+	}
+
+	@include mq(lg) {
+		align-self: start;
+		text-align: center;
+		gap: 3.2rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		line-height: 1.3;
+		letter-spacing: 0.5rem;
+		color: var(--dark-grey);
+	}
+
+	p {
+		font-size: 1.6rem;
+		color: var(--dark-grey);
+		line-height: 1.625;
+	}
+}
