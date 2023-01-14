@@ -34,7 +34,7 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [リンク](https://github.com/Kaji1127/designo-multi-page-websit)
+- Solution URL: [リンク](https://github.com/Kaji1127/designo-multi-page-website/)
 - Live Site URL: [リンク](https://designo-multi-page-website-wheat.vercel.app/)
 
 ## My process
