@@ -11,10 +11,6 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -46,6 +42,6 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 - CSS Grid
 - モバイルファースト
 
-### 学んだこと
+### What I learned
 
 初めて Next.js を使って Web サイトを作った。StaticSiteGeneration(SSG)を実装する方法について学ぶことができた。
